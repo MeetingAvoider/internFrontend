@@ -10,7 +10,7 @@ export default function OppurtunitiesComponent() {
   },[])
   const fetchAppliedOppurtunities=async()=>{
     try {
-      const response =await axios.get("http://localhost:3000/auth/applied-oppurtunities")
+      const response =await axios.get("https://internbackend-xob8.onrender.com/auth/applied-oppurtunities")
     setAppliedOppurtunities(response.data)
     } catch (error) {
       console.log(error)
@@ -51,7 +51,7 @@ const OppurtunityCard = ({oppurtunity,appliedOppurtunities})=>{
 
   const applyForOppurtunity= (oppurtunity)=>{
       try {
-         axios.post("http://localhost:3000/auth/apply",{oppurtunity}).then((res)=>{
+         axios.post("https://internbackend-xob8.onrender.com/auth/apply",{oppurtunity}).then((res)=>{
           console.log(res)
          })
          navigate("/dashboard")
