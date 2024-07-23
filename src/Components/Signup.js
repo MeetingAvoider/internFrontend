@@ -14,7 +14,7 @@ export default function Signup() {
             setError("Please fill all fields")
             return;
         }
-        Axios.post("http://localhost:3000/auth/signup",{
+        Axios.post("https://internbackend-xob8.onrender.com/auth/signup",{
             username,
             email,
             password
